@@ -9,8 +9,6 @@ import {
   SinglePlayer,
 } from "./components";
 
-//On the puppy bowls step by step instructions I left off on 4. Fetch players, everything before that has been done
-
 //Keep in mind that the <Route> for Single Player is probably going to change
 //depending on how we fetch the data so the path "/players/id:" can change
 //for now i will leave it as is and if im getting erros that might be the case and it needs

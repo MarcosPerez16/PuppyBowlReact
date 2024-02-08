@@ -6,39 +6,28 @@ import { fetchPlayerDetails } from "../API";
 
 const SinglePlayer = () => {
   // logic here
-  const { id } = useParams();
-  const [playerDetails, setPlayerDetails] = useState(null);
+
+  const [player, setPlayer] = useState({});
+  let { id } = useParams();
 
   useEffect(() => {
     async function getPlayerDetails() {
-      try {
-        const details = await fetchPlayerDetails(id);
-        setPlayerDetails(details);
-      } catch (error) {
-        console.error("error fetching player details", error);
-      }
+      const myPlayer = await fetchPlayerDetails(id);
+      setPlayer(myPlayer);
     }
 
-    if (id) {
-      getPlayerDetails();
-    }
+    getPlayerDetails();
   }, [id]);
-
-  if (!playerDetails) {
-    return <div>Loading...</div>;
-  }
 
   return (
     <div>
       <h2>Player Details</h2>
-      <p>Name: {playerDetails.name}</p>
-      <p>ID: {playerDetails.id}</p>
-      <p>Breed: {playerDetails.breed}</p>
-      <p>Status: {playerDetails.status}</p>
+      <p>ID: {id}</p>
+      <p>Name: {player.name}</p>
+      <p>Breed: {player.breed}</p>
+      <p>Status: {player.status}</p>
       <p></p>
-      <p>
-        Picture: <img src={playerDetails.imageUrl} alt={playerDetails.name} />
-      </p>
+      <p></p>
     </div>
   );
 };

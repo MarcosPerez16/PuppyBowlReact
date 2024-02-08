@@ -85,7 +85,7 @@ const App = () => {
           Status:{" "}
           <input
             type="text"
-            name="Status"
+            name="status"
             value={newPlayer.status}
             onChange={handleChange}
           />{" "}

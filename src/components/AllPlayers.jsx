@@ -1,11 +1,13 @@
 // imports here
 import { useState, useEffect } from "react";
 import { fetchPlayers } from "../API";
+import { useNavigate } from "react-router-dom";
 
 const AllPlayers = () => {
   // logic here
 
   const [players, setPlayers] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function getPlayersList() {
@@ -17,7 +19,11 @@ const AllPlayers = () => {
     getPlayersList();
   }, []);
 
-  //we can find a nice style for each of the below attributes at a different time
+  const handleSeeDetails = (playerId) => {
+    navigate(`/players/${playerId}`);
+  };
+
+  //we can find a nice style for each of the below elements at a different time
   return (
     <div>
       <h1>Players List</h1>
@@ -25,8 +31,10 @@ const AllPlayers = () => {
         {players.map((player) => (
           <li key={player.name}>
             <h2>Name: {player.name}</h2>
-            <h3>Breed: {player.breed}</h3>
-            <h4>player ID: {player.id}</h4>
+
+            <button onClick={() => handleSeeDetails(player.id)}>
+              See Details
+            </button>
           </li>
         ))}
       </ul>

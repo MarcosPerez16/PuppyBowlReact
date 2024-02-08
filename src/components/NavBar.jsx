@@ -8,7 +8,7 @@ const NavBar = () => {
     <nav>
       <Link to={"/"}>Home</Link>
       <Link to={"/allplayers"}>All Players</Link>
-      <Link to={"/players/:id"}>Single Player</Link>
+      <Link to={"/players"}>Single Player</Link>
       <Link to={"/newplayerform"}>New Player Form</Link>
     </nav>
   );

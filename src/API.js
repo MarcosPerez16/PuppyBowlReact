@@ -11,3 +11,10 @@ export async function fetchPlayers() {
   //in the return statement we access data from json object first, then the data.players
   //refers to accessing the players property within the data object in the API
 }
+
+export async function fetchPlayerDetails(playerId) {
+  const response = await fetch(`${APIURL}/players/${playerId}`);
+  const data = await response.json();
+  console.log(data);
+  return data.data.player;
+}

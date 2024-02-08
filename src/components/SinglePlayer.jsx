@@ -26,8 +26,9 @@ const SinglePlayer = () => {
       <p>Name: {player.name}</p>
       <p>Breed: {player.breed}</p>
       <p>Status: {player.status}</p>
-      <p></p>
-      <p></p>
+      <p>
+        Picture: <img src={player.imageUrl} alt={player.name} />
+      </p>
     </div>
   );
 };

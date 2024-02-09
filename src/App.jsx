@@ -9,11 +9,6 @@ import {
   SinglePlayer,
 } from "./components";
 
-//Keep in mind that the <Route> for Single Player is probably going to change
-//depending on how we fetch the data so the path "/players/id:" can change
-//for now i will leave it as is and if im getting erros that might be the case and it needs
-//to be fixed to the correct path and then we can link it in our navbar component
-
 function App() {
   return (
     <>

@@ -57,6 +57,9 @@ const AllPlayers = () => {
   }, []);
 
   //we can find a nice style for each of the below elements at a different time
+  //use a table instead of list
+  //have icons next to see details and trash that have a magnifiing glass for see details
+  // and a trash can for delete player
   return (
     <div>
       <h1>Players List</h1>

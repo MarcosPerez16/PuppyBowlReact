@@ -6,3 +6,4 @@ export { default as AllPlayers } from "./AllPlayers";
 export { default as NavBar } from "./NavBar.jsx";
 export { default as NewPlayerForm } from "./NewPlayerForm.jsx";
 export { default as SinglePlayer } from "./SinglePlayer.jsx";
+export { default as PlayerSearch } from "./PlayerSearch.jsx";

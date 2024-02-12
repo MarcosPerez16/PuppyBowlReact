@@ -23,7 +23,7 @@ const PlayerSearch = () => {
   };
 
   return (
-    <div>
+    <div className="player-search">
       <h2>PlayerSearch</h2>
       <input
         type="text"
@@ -31,7 +31,9 @@ const PlayerSearch = () => {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <button onClick={handleSearch}>Search</button>
+      <button style={{ backgroundColor: "white" }} onClick={handleSearch}>
+        Search
+      </button>
 
       <h3>Search Results:</h3>
       {error ? (

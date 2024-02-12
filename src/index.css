@@ -1,68 +1,163 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/* Reset some default styles */
+body, h1, p, ul, li, button, input {
+    margin: 0;
+    padding: 0;
+    background-color: darkgoldenrod;
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
   }
-  a:hover {
-    color: #747bff;
+  
+  body {
+    font-family: Arial, sans-serif;
   }
-  button {
-    background-color: #f9f9f9;
+  
+  /* Navigation Bar Styles */
+  .top-right-nav {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
   }
-}
+  
+  .top-right-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-right: 15px;
+  }
+  
+  .top-right-nav a:hover {
+    color: #ff9900;
+  }
+  
+  /* Home Component Styles */
+    .home-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+  }
+  
+  .home-title h1 {
+    margin-bottom: 20px;
+  }
+
+
+
+  
+  /* All Players Component Styles */
+  .players-list {
+    text-align: center;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    
+  }
+  
+  .players-list h1 {
+    margin-bottom: 20px;
+    
+  }
+  
+  .players-list ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .players-list li {
+    margin: 0 10px 10px 0;
+    width: 150px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .players-list button {
+    margin-top: 10px;
+    margin: 5px;
+  }
+  
+
+  
+
+/* SinglePlayer Component Styles */
+.single-player {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .single-player h2 {
+    margin-bottom: 20px;
+  }
+  
+  .single-player div {
+    padding: 20px;
+    
+    
+    
+  }
+  
+  .single-player p {
+    margin-bottom: 10px;
+  }
+  
+  .single-player img {
+    max-width: 50%;
+    height: auto;
+    margin-top: 25px;
+  }
+
+  
+  
+
+
+
+
+
+  /* Player Search Component Styles */
+  .player-search {
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  .player-search input {
+    margin-right: 10px;
+    
+  }
+
+ 
+
+
+
+
+
+  
+  /* New Player Form Component Styles */
+  .new-player-form {
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  .new-player-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .new-player-form label {
+    margin-bottom: 10px;
+    
+  }
+  

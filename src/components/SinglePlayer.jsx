@@ -20,15 +20,22 @@ const SinglePlayer = () => {
   }, [id]);
 
   return (
-    <div>
+    <div className="single-player">
       <div>
-        <h2>Player Details</h2>
-        <p>ID: {id}</p>
-        <p>Name: {player.name}</p>
-        <p>Breed: {player.breed}</p>
-        <p>Status: {player.status}</p>
         <p>
-          Picture: <img src={player.imageUrl} alt={player.name} />
+          <span style={{ color: "blue" }}>ID:</span> {id}
+        </p>
+        <p>
+          <span style={{ color: "blue" }}>Name:</span> {player.name}
+        </p>
+        <p>
+          <span style={{ color: "blue" }}>Breed:</span> {player.breed}
+        </p>
+        <p>
+          <span style={{ color: "blue" }}>Status:</span> {player.status}
+        </p>
+        <p>
+          <img src={player.imageUrl} alt={player.name} />
         </p>
       </div>
     </div>

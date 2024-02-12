@@ -17,10 +17,17 @@ const Player = ({ playerName, playerId, onDelete }) => {
 
   return (
     <li>
-      <h2>Name: {playerName}</h2>
+      <h4>Name: {playerName}</h4>
 
-      <button onClick={() => handleSeeDetails(playerId)}>See Details</button>
-      <button onClick={handleDelete}>Delete Player</button>
+      <button
+        style={{ backgroundColor: "white" }}
+        onClick={() => handleSeeDetails(playerId)}
+      >
+        See Details
+      </button>
+      <button style={{ backgroundColor: "red" }} onClick={handleDelete}>
+        Delete Player
+      </button>
     </li>
   );
 };
@@ -61,7 +68,7 @@ const AllPlayers = () => {
   //have icons next to see details and trash that have a magnifiing glass for see details
   // and a trash can for delete player
   return (
-    <div>
+    <div className="players-list">
       <h1>Players List</h1>
       <ul>
         {players.map((player, idx) => (

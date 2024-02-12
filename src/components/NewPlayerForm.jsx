@@ -52,7 +52,7 @@ const NewPlayerForm = () => {
   };
 
   return (
-    <div>
+    <div className="new-player-form">
       <h1>New Player Form</h1>
 
       <form onSubmit={handleSubmit}>
@@ -100,7 +100,9 @@ const NewPlayerForm = () => {
           />
         </label>
         <br />
-        <button type="submit">Add Player</button>
+        <button style={{ backgroundColor: "white" }} type="submit">
+          Add Player
+        </button>
       </form>
     </div>
   );
